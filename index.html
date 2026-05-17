@@ -308,7 +308,7 @@ function render() {
   if (!S.cat) {
     html += '<div class="lbl">PILIH KATEGORI</div>';
     filtCats.forEach(function(c) {
-      html += '<button class="cat-btn" onclick="openCat(''+c.key+'')">'
+      html += '<button class="cat-btn" onclick="openCat(\''+c.key+'\')">'
         +'<div><div class="cat-name">'+c.label+'</div><div class="cat-sub">'+c.items.length+' menu</div></div>'
         +'<div class="cat-count">'+c.items.length+'</div></button>';
     });
@@ -321,7 +321,7 @@ function render() {
     }
     html += '<div class="lbl">'+visItems.length+' ITEM — Tap untuk pilih</div>';
     visItems.forEach(function(item) {
-      html += '<button class="item-btn '+(S.selItem===item[0]?'sel':'')+'" onclick="selItem(''+item[0]+'')">'
+      html += '<button class="item-btn '+(S.selItem===item[0]?'sel':'')+'" onclick="selItem(\''+item[0]+'\')">'
         +'<div><div class="item-name">'+item[1]+'</div><div class="item-desc">'+item[2]+'</div></div>'
         +(S.selItem===item[0]?'<span style="color:#e91e8c;font-size:20px;font-weight:700">✓</span>':'')
         +'</button>';
